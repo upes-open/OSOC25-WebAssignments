@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #1a1a1a;
+        color: #f0f0f0;
+      }
+      .nav-container {
+        margin-bottom: 40px;
+      }
+      h2 {
+        margin-bottom: 20px;
+      }
+      .nav1 {
+        background-color: #f0f0f0;
+        padding: 10px;
+      }
+      .nav1 ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+      }
+      .nav1 li {
+        display: inline;
+      }
+      .nav1 a {
+        text-decoration: none;
+        color: #180f0f;
+        /* background-color: #af1010; */
+        padding: 10px 15px;
+        position: relative;
+      }
+      .nav1 a::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background-color: #1041a4;
+        transform: scaleX(0);
+        transition: transform 0.175s ease-in-out;
+      }
+      .nav1 a:hover::after {
+        transform: scaleX(1);
+      }
+      .nav1 .login-btn {
+        background-color: #1041a4;
+        color: #fff;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .nav1 .login-btn:hover {
+        background-color: #000000;
+      }
+      .about-list {
+        margin-top: 15px;
+        padding-left: 20px;
+        color: #e0e0e0;
+      }
+      .about-list li {
+        margin-bottom: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav-container">
+      <nav class="nav1">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
+      <section
+        style="display: flex; gap: 40px; align-items: flex-start; margin: auto"
+      >
+        <div>
+          <img
+            src="/images/my-pic.jpg"
+            alt="My Photo"
+            style="
+              margin-top: 18px;
+              height: 400px;
+              width: 400px;
+              border-radius: 10px;
+              box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
+            "
+          />
+        </div>
+        <div
+          style="
+            max-width: 100%;
+            color: #e0e0e0;
+            box-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
+            margin-top: 18px;
+            border-radius: 10px;
+            padding: 10px;
+          "
+        >
+          <h2 style="margin-left: 10px">About Me</h2>
+          <p style="margin-left: 10px">
+            Hello! I'm <b>Soumya Jain</b>, a passionate learner and web
+            developer. I enjoy creating modern, responsive websites and
+            exploring new technologies. My interests include coding, design, and
+            continuous self-improvement.
+          </p>
+          <ul class="about-list" style="list-style-type: none">
+            <li>Email: soumya.11082005@email.com</li>
+            <li>Location: Dehradun, India</li>
+            <li>Skills: HTML, CSS, JavaScript</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
