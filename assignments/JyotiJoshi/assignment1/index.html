@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grid & Flexbox Practice</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #f4f6f8;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #282c34;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      animation: slideDown 1s ease-out forwards;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .container {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card {
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: white;
+      font-weight: 500;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+    .card.card1 { background: #2a9d8f; }
+    .card.card2 { background: #f4a261; }
+    .card.card3 { background: #e76f51; }
+    .card.card4 { background: #264653; }
+
+    footer {
+      background: #222;
+      color: #ddd;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Practice Grid & Flexbox Layout</h1>
+    <p>Hands-on learning with colorful boxes</p>
+  </header>
+
+  <div class="container">
+    <div class="card card1">
+      <h3>Practice: CSS Grid Basics</h3>
+      
+    </div>
+    <div class="card card2">
+      <h3>Practice: Responsive Design</h3>
+    </div>
+    <div class="card card3">
+      <h3>Practice: Flexbox Structure</h3>
+    </div>
+    <div class="card card4">
+      <h3>Practice: Animations</h3>
+    </div>
+  </div>
+
+  <footer>
+    <p>Grid & Flexbox Practice — HTML & CSS only — 2025</p>
+  </footer>
+
+</body>
+</html>
